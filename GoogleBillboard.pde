@@ -2,7 +2,7 @@ public final static String e = "2.7182818284590452353602874713526624977572470936
 public double x;
 public boolean y = false;
 public void setup()  
-{    
+{   long startTime = System.nanoTime(); 
     for(int i = 0; i < e.length()-11; i++){
         x = Double.parseDouble(e.substring(i,i+10).replace(".",""));
         y = isPrime(x);
@@ -10,7 +10,11 @@ public void setup()
           break;
         }
 }
+    
     System.out.println(y);
+    long endTime = System.nanoTime();
+    long duration = (endTime - startTime);
+    System.out.println("Runtime is: " + duration/1000000.00 + "ms");
 }  
 public void draw()  
 {   
