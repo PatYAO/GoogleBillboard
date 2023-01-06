@@ -4,7 +4,7 @@ public boolean y = false;
 public void setup()  
 {    
     for(int i = 0; i < e.length()-11; i++){
-        x = Double.parseDouble(e.substring(i,i+11).replace(".",""));
+        x = Double.parseDouble(e.substring(i,i+10).replace(".",""));
         y = isPrime(x);
         if(y == true){
           break;
